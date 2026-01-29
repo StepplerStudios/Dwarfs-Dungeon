@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ba35gs1ifwdup" path="res://Props/player/player.gd" id="1_qrh41"]
 [ext_resource type="Texture2D" uid="uid://djop7sgwleoyy" path="res://Assets/AnimPlayer_test_sprite/Character Sprite Sheet.png" id="2_y27rj"]
+[ext_resource type="Script" uid="uid://y12raj4qwmj4" path="res://Props/PatternState/StateMachine/PlayerStateMachine.gd" id="3_qsgml"]
+[ext_resource type="Script" uid="uid://bwsgq2lbxshh7" path="res://Props/player/States/idle_state.gd" id="4_38plr"]
+[ext_resource type="Script" uid="uid://xglqnobgfan7" path="res://Props/player/States/run_state.gd" id="5_c5mag"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y27rj"]
 atlas = ExtResource("2_y27rj")
@@ -603,3 +606,14 @@ tree_root = SubResource("AnimationNodeStateMachine_nawew")
 anim_player = NodePath("../AnimationPlayer")
 parameters/idle/blend_position = Vector2(0, 0)
 parameters/run/blend_position = Vector2(0, 0)
+
+[node name="StateMachine" type="Node" parent="." unique_id=646274614]
+script = ExtResource("3_qsgml")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=211897814 node_paths=PackedStringArray("run")]
+script = ExtResource("4_38plr")
+run = NodePath("../Run")
+
+[node name="Run" type="Node" parent="StateMachine" unique_id=480932651 node_paths=PackedStringArray("idle")]
+script = ExtResource("5_c5mag")
+idle = NodePath("../Idle")

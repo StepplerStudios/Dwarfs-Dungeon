@@ -24,7 +24,8 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://Assets/": "yellow",
-"res://Props/": "green"
+"res://Props/": "green",
+"res://Props/PatternState/": "blue"
 }
 
 [input]
