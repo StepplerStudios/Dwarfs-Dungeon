@@ -15,10 +15,11 @@ func Exit() -> void:
 
 
 func Process(_delta: float) -> State:
-	if player.input_dir == Vector2.ZERO:
-		player.anim_tree.set("parameters/idle/blend_position", player.input_dir)
-	else:
+	if player.input_dir != Vector2.ZERO:
 		return run
+	
+	player.anim_tree.set("parameters/idle/blend_position", player.last_dir)
+	player.velocity = Vector2.ZERO
 	
 	return null
 

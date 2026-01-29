@@ -9,6 +9,7 @@ class_name Player extends CharacterBody2D
 
 @export_category("directions")
 var input_dir: Vector2 = Vector2.ZERO
+var last_dir: Vector2 = Vector2.DOWN
 
 
 func _ready() -> void:
@@ -25,5 +26,8 @@ func _process(delta: float) -> void:
 func move(_delta: float):
 
 	input_dir = Input.get_vector("left","right","up","down")
+	
+	if input_dir != Vector2.ZERO:
+		last_dir = input_dir
 
 	move_and_slide()
