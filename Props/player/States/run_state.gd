@@ -5,6 +5,10 @@ class_name PlayerStateRun extends State
 @export var deceleration: float = 2600
 
 @export var idle: PlayerStateIdle
+@export var attack: PlayerStateAttack
+
+
+
 
 func Enter() -> void:
 	player.anim_state.travel("run")
@@ -19,7 +23,7 @@ func Exit() -> void:
 
 func Process(_delta: float) -> State:
 	if player.input_dir != Vector2.ZERO:
-		player.anim_tree.set("parameters/run/blend_position", player.input_dir)
+		player.anim_tree.set("parameters/run/blend_position", player.last_dir)
 		player.velocity = player.velocity.move_toward(
 			player.input_dir.normalized() * speed,
 			 aceleration * _delta)
@@ -27,6 +31,7 @@ func Process(_delta: float) -> State:
 	else:
 		player.velocity = player.velocity.move_toward(
 			Vector2.ZERO,deceleration * _delta)
+
 		return idle
 	
 	return null
@@ -39,4 +44,6 @@ func Physic(_delta: float) -> State:
 
 
 func Unhandled_input(_event: InputEvent) -> State:
+	if _event.is_action_pressed("attack"):
+		return attack
 	return null

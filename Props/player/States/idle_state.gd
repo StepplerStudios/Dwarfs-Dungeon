@@ -1,6 +1,7 @@
 class_name PlayerStateIdle extends State
  
 @export var run: PlayerStateRun
+@export var attack: PlayerStateAttack
 
 
 func Enter() -> void:
@@ -31,4 +32,6 @@ func Physic(_delta: float) -> State:
 
 
 func Unhandled_input(_event: InputEvent) -> State:
+	if _event.is_action_pressed("attack"):
+		return attack
 	return null
