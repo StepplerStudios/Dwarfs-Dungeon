@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://bploa2vx6xnbt"]
+
+[ext_resource type="Script" uid="uid://djqav1iihas7p" path="res://Props/Resourses/Weapons.gd" id="1_5l45o"]
+[ext_resource type="Texture2D" uid="uid://caqyewxn5g7nm" path="res://Assets/Pick_test/pick_test.png" id="2_ufs5e"]
+
+[resource]
+script = ExtResource("1_5l45o")
+name = "Pick"
+damage = 10.0
+sprite = ExtResource("2_ufs5e")
+animation = "pick_attack"
+metadata/_custom_type_script = "uid://djqav1iihas7p"

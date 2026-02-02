@@ -6,6 +6,8 @@ class_name Player extends CharacterBody2D
 
 @onready var anim_tree: AnimationTree = $AnimationTree
 @onready var anim_state = anim_tree.get("parameters/playback")
+@onready var weapon: Weapon = $WeaponRotate/Weapon
+
 
 @export_category("directions")
 var input_dir: Vector2 = Vector2.ZERO
@@ -19,7 +21,6 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-
 	move(delta)
 
 

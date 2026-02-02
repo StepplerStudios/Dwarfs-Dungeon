@@ -1,11 +1,11 @@
 class_name PlayerStateRun extends State
  
-@export var speed: float = 280
-@export var aceleration: float = 2200
-@export var deceleration: float = 2600
+@export var speed: float = 480
+@export var aceleration: float = 1300
+@export var deceleration: float = 1800
 
 @export var idle: PlayerStateIdle
-@export var attack: PlayerStateAttack
+
 
 
 
@@ -44,6 +44,4 @@ func Physic(_delta: float) -> State:
 
 
 func Unhandled_input(_event: InputEvent) -> State:
-	if _event.is_action_pressed("attack"):
-		return attack
 	return null
