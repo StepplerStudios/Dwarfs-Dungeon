@@ -1,7 +1,7 @@
 class_name HitBox extends Area2D
 
 
-signal Damaged (damage: int)
+signal Damaged (damage: HurtBox)
 
 
 
