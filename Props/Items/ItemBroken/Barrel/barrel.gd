@@ -15,4 +15,5 @@ func _ready() -> void:
 
 
 func destroy_barrel(_hurt_box: HurtBox) -> void:
-	self.queue_free()
+	if _hurt_box is HurtBox:
+		self.queue_free()
