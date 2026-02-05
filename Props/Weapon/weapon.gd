@@ -5,7 +5,7 @@ class_name Weapon extends Node2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var weapon_fx: AnimationPlayer = $WeaponFX
-@onready var hit_box: HitBox = $HitBox
+@onready var hurt_box: HurtBox = $HurtBox
 
 
 var can_attack: = true
@@ -24,9 +24,10 @@ func attack():
 		return
 	
 	can_attack = false 
+	hurt_box.monitoring = true
 	var anim = data.animation
 	weapon_fx.play(anim)
-	hit_box.Damaged.emit()
+
 
 
 
