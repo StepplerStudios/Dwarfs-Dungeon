@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chxedsas0o5ks"
-path="res://.godot/imported/Pickaxe.png-40e5dc3ec6db119368d80291a014b67c.ctex"
+uid="uid://xmavnbsxbnxv"
+path="res://.godot/imported/Floor_1_test.png-283a7b4aeab6cc9178fdbb63ce6677af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pickaxe.png"
-dest_files=["res://.godot/imported/Pickaxe.png-40e5dc3ec6db119368d80291a014b67c.ctex"]
+source_file="res://Assets/DD_Sprites/DD_Sprites/Floor_1_test.png"
+dest_files=["res://.godot/imported/Floor_1_test.png-283a7b4aeab6cc9178fdbb63ce6677af.ctex"]
 
 [params]
 

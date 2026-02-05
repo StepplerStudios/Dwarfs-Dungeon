@@ -5,21 +5,29 @@ class_name Weapon extends Node2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var weapon_fx: AnimationPlayer = $WeaponFX
+@onready var hit_box: HitBox = $HitBox
 
 
-
+var can_attack: = true
 
 
 
 func _ready() -> void:
 	sprite.texture = data.sprite
-
-
-func _process(_delta: float) -> void:
-	play_animation(data.animation)
+	weapon_fx.animation_finished.connect(_end_attack)
 
 
 
 
-func play_animation(_animation: String) -> void:
-	weapon_fx.play(_animation)
+func attack():
+	if not can_attack:
+		return
+	
+	can_attack = false 
+	var anim = data.animation
+	weapon_fx.play(anim)
+
+
+
+func _end_attack(_anim: String) -> void:
+	can_attack = true

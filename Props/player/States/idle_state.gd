@@ -3,7 +3,6 @@ class_name PlayerStateIdle extends State
 @export var run: PlayerStateRun
 
 
-
 func Enter() -> void:
 	player.anim_state.travel("idle")
 	pass
@@ -32,5 +31,4 @@ func Physic(_delta: float) -> State:
 
 
 func Unhandled_input(_event: InputEvent) -> State:
-
 	return null

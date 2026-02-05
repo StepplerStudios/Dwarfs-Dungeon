@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dliv720oq0edl"
-path="res://.godot/imported/Floor_1_test_2.png-aea13dd3e0307ed54df568b7ac455006.ctex"
+uid="uid://di6pdj2gf84ml"
+path="res://.godot/imported/Torch_not_work.png-521e656e0b237fad4ebc7171f3ae1309.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Floor_1_test_2.png"
-dest_files=["res://.godot/imported/Floor_1_test_2.png-aea13dd3e0307ed54df568b7ac455006.ctex"]
+source_file="res://Assets/DD_Sprites/DD_Sprites/Torch_not_work.png"
+dest_files=["res://.godot/imported/Torch_not_work.png-521e656e0b237fad4ebc7171f3ae1309.ctex"]
 
 [params]
 

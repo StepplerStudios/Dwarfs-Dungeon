@@ -3,10 +3,13 @@ class_name Player extends CharacterBody2D
 
 @export_category("nodes")
 @onready var state_machine: StateMachine = $StateMachine
+@onready var weapon: Weapon = $WeaponRotate/Weapon
+
+
 
 @onready var anim_tree: AnimationTree = $AnimationTree
 @onready var anim_state = anim_tree.get("parameters/playback")
-@onready var weapon: Weapon = $WeaponRotate/Weapon
+
 
 
 @export_category("directions")
@@ -27,8 +30,14 @@ func _process(delta: float) -> void:
 func move(_delta: float):
 
 	input_dir = Input.get_vector("left","right","up","down")
-	
+
 	if input_dir != Vector2.ZERO:
 		last_dir = input_dir
 
 	move_and_slide()
+
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("attack"):
+		weapon.attack()

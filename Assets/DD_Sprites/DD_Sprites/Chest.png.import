@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nuvings5pjac"
-path="res://.godot/imported/Wall_2_test.png-a0ee9b67efde59aeed75d0877e597ac1.ctex"
+uid="uid://cx0ah1tirv32m"
+path="res://.godot/imported/Chest.png-4f3f22f727a582264094e2699fda321d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Wall_2_test.png"
-dest_files=["res://.godot/imported/Wall_2_test.png-a0ee9b67efde59aeed75d0877e597ac1.ctex"]
+source_file="res://Assets/DD_Sprites/DD_Sprites/Chest.png"
+dest_files=["res://.godot/imported/Chest.png-4f3f22f727a582264094e2699fda321d.ctex"]
 
 [params]
 
