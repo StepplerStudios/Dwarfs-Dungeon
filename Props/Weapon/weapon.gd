@@ -26,6 +26,7 @@ func attack():
 	can_attack = false 
 	var anim = data.animation
 	weapon_fx.play(anim)
+	hit_box.Damaged.emit()
 
 
 

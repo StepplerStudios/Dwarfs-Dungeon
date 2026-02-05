@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://invk46pjlo5a"]
+
+[ext_resource type="Script" uid="uid://c3053pgqhkcvm" path="res://Props/Items/ItemBroken/Barrel/barrel.gd" id="1_2ii7g"]
+[ext_resource type="Texture2D" uid="uid://bvamkmla74lpl" path="res://Assets/DD_Sprites/DD_Sprites/Barrel.png" id="2_xxpym"]
+[ext_resource type="PackedScene" uid="uid://bm1qxd5saw8dh" path="res://Props/GeneralNodes/Hitboxes/hit_box.tscn" id="3_ux5om"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s4tg5"]
+radius = 30.364452
+
+[node name="Barrel" type="Node2D" unique_id=283866115]
+script = ExtResource("1_2ii7g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1748764666]
+scale = Vector2(3, 3)
+texture = ExtResource("2_xxpym")
+
+[node name="HitBox" parent="." unique_id=216604319 instance=ExtResource("3_ux5om")]
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=493294801]
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_s4tg5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=770681027]
+collision_layer = 16
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2087540244]
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_s4tg5")

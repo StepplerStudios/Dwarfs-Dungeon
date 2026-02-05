@@ -615,10 +615,6 @@ parameters/idle/blend_position = Vector2(0, 0)
 parameters/run/blend_position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=478833006]
-limit_left = -100
-limit_top = -200
-limit_right = 1400
-limit_bottom = 800
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="fortess"
+config/name="Dwar's Dungeon"
 run/main_scene="uid://ctaqt2rlrh760"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -26,6 +26,8 @@ window/stretch/mode="canvas_items"
 folder_colors={
 "res://Assets/": "yellow",
 "res://Props/": "green",
+"res://Props/Items/": "red",
+"res://Props/Levels/": "pink",
 "res://Props/PatternState/": "blue",
 "res://Props/Resourses/": "purple",
 "res://Props/Weapon/": "orange"
@@ -74,4 +76,3 @@ attack={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
