@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bewfm38h1yrjv" path="res://Props/Weapon/weapon_rotate.gd" id="6_a53hr"]
 [ext_resource type="Resource" uid="uid://bploa2vx6xnbt" path="res://Props/Weapon/Pick/PickData.tres" id="8_25rdr"]
 [ext_resource type="Script" uid="uid://4aa3j2jn88vk" path="res://Props/GeneralNodes/AimController/aim_controller.gd" id="9_25rdr"]
+[ext_resource type="Script" uid="uid://csss2gsxqqhuo" path="res://Props/GeneralNodes/Hitboxes/hit_box.gd" id="10_sasw7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y27rj"]
 atlas = ExtResource("2_y27rj")
@@ -589,6 +590,10 @@ states/run/node = SubResource("AnimationNodeBlendSpace2D_47mtg")
 states/run/position = Vector2(543, 97)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_38plr"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_y27rj"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_qsgml")]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47mtg"]
+radius = 3.399994
+height = 9.199997
+
 [node name="player" type="CharacterBody2D" unique_id=1895340081]
 z_index = 1
 position = Vector2(544, 274)
@@ -626,15 +631,21 @@ run = NodePath("../Run")
 script = ExtResource("5_c5mag")
 idle = NodePath("../Idle")
 
-[node name="WeaponRotate" type="Node2D" parent="." unique_id=771723483 node_paths=PackedStringArray("weapon")]
+[node name="WeaponRotate" type="Node2D" parent="." unique_id=771723483]
 script = ExtResource("6_a53hr")
-weapon = NodePath("Weapon")
 
 [node name="Weapon" parent="WeaponRotate" unique_id=844050352 instance=ExtResource("6_77agv")]
-light_mask = 0
-z_as_relative = false
 data = ExtResource("8_25rdr")
 
 [node name="AimController" type="Node2D" parent="." unique_id=1218137174 node_paths=PackedStringArray("player")]
 script = ExtResource("9_25rdr")
 player = NodePath("..")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1449673906]
+script = ExtResource("10_sasw7")
+metadata/_custom_type_script = "uid://csss2gsxqqhuo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1269560232]
+position = Vector2(-0.5999985, 2)
+shape = SubResource("CapsuleShape2D_47mtg")
+debug_color = Color(0.20857254, 0.5882921, 0.22232533, 0.41960785)

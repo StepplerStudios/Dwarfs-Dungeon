@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cy67fsb8b7n0u"]
+
+[ext_resource type="Texture2D" uid="uid://ssnsr8eau5gf" path="res://Assets/Test_Sprites/spike_4.png" id="1_2unr3"]
+[ext_resource type="Script" uid="uid://cqyi5gogogwuv" path="res://Props/Levels/Dangers/spike.gd" id="1_fx8yi"]
+[ext_resource type="Script" uid="uid://csss2gsxqqhuo" path="res://Props/GeneralNodes/Hitboxes/hit_box.gd" id="3_dicna"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17fl5"]
+size = Vector2(11, 12.5)
+
+[node name="Spike" type="Node2D" unique_id=1793502346]
+scale = Vector2(4, 4)
+script = ExtResource("1_fx8yi")
+damage = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=253741096]
+texture = ExtResource("1_2unr3")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=847371142]
+script = ExtResource("3_dicna")
+metadata/_custom_type_script = "uid://csss2gsxqqhuo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1244885455]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_17fl5")
+debug_color = Color(0.99387914, 0, 0.23791203, 0.41960785)

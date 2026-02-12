@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://df2dpmr1cnrw1" path="res://Props/GeneralNodes/Camera/room_zone_camera.tscn" id="4_6fgck"]
 [ext_resource type="PackedScene" uid="uid://invk46pjlo5a" path="res://Props/Items/ItemBroken/Barrel/barrel.tscn" id="5_6fgck"]
 [ext_resource type="PackedScene" uid="uid://dkjkbjmg63qdd" path="res://Props/Levels/Background/background.tscn" id="6_iffbl"]
+[ext_resource type="PackedScene" uid="uid://cy67fsb8b7n0u" path="res://Props/Levels/Dangers/Spike.tscn" id="6_p07gb"]
 [ext_resource type="PackedScene" uid="uid://bwmhxdr6ixbgp" path="res://Props/Items/Decor/Chest.tscn" id="7_271cg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iffbl"]
@@ -76,6 +77,11 @@ position = Vector2(409, 595.25)
 shape = SubResource("RectangleShape2D_b2tsv")
 debug_color = Color(0, 0.6392157, 0.39215687, 0.41960785)
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Room1/CameraZoneArea" unique_id=78855193]
+position = Vector2(-7, -4.75)
+shape = SubResource("RectangleShape2D_b2tsv")
+debug_color = Color(0, 0.6392157, 0.39215687, 0.41960785)
+
 [node name="Barrel" parent="Room1" unique_id=283866115 instance=ExtResource("5_6fgck")]
 position = Vector2(-117, -193)
 
@@ -131,6 +137,9 @@ debug_color = Color(0.85882354, 0.3647059, 0, 0.41960785)
 position = Vector2(775, -181)
 shape = SubResource("RectangleShape2D_1sjgl")
 debug_color = Color(0.85882354, 0.3647059, 0, 0.41960785)
+
+[node name="Spike" parent="Room3" unique_id=1793502346 instance=ExtResource("6_p07gb")]
+position = Vector2(224, 264)
 
 [node name="Room4" type="Node2D" parent="." unique_id=1850411193]
 position = Vector2(5556, 1012)
@@ -222,7 +231,6 @@ shape = SubResource("RectangleShape2D_p07gb")
 debug_color = Color(0.981343, 0.109177105, 0.21267706, 0.41960785)
 
 [node name="BackgroundGroup" type="Node2D" parent="." unique_id=1864330541]
-visible = false
 position = Vector2(3380, 2150)
 scale = Vector2(43.798, 51.951)
 

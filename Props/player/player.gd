@@ -5,6 +5,8 @@ class_name Player extends CharacterBody2D
 @onready var state_machine: StateMachine = $StateMachine
 @onready var weapon: Weapon = $WeaponRotate/Weapon
 
+const MAX_HEALTH: int = 8
+@export var health: int = 8
 
 
 
