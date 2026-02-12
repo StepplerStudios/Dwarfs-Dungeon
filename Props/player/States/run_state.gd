@@ -29,8 +29,7 @@ func Process(_delta: float) -> State:
 			 aceleration * _delta)
 	
 	else:
-		player.velocity = player.velocity.move_toward(
-			Vector2.ZERO,deceleration * _delta)
+		player.input_dir = Vector2.ZERO
 
 		return idle
 	

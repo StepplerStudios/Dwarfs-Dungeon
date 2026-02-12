@@ -7,6 +7,7 @@ class_name Player extends CharacterBody2D
 
 
 
+
 @onready var anim_tree: AnimationTree = $AnimationTree
 @onready var anim_state = anim_tree.get("parameters/playback")
 
@@ -19,7 +20,7 @@ var last_dir: Vector2 = Vector2.DOWN
 
 func _ready() -> void:
 	state_machine.Initialize(self)
-
+	GameManager.player = self
 
 
 

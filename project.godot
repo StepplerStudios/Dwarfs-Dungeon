@@ -15,10 +15,15 @@ run/main_scene="uid://ctaqt2rlrh760"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Event_Bus="*uid://cjlxxwmn7m8hw"
+GameManager="*uid://c7vu2lyvee3rm"
+
 [display]
 
 window/size/viewport_width=1270
-window/size/viewport_height=720
+window/size/viewport_height=800
 window/stretch/mode="canvas_items"
 
 [file_customization]
@@ -26,6 +31,7 @@ window/stretch/mode="canvas_items"
 folder_colors={
 "res://Assets/": "yellow",
 "res://Props/": "green",
+"res://Props/0_Global/": "gray",
 "res://Props/Items/": "red",
 "res://Props/Levels/": "pink",
 "res://Props/PatternState/": "blue",
@@ -64,7 +70,9 @@ attack={
 [layer_names]
 
 2d_physics/layer_1="Player"
-2d_physics/layer_2="Damage"
+2d_physics/layer_2="HurtBox"
+2d_physics/layer_3="Camera"
+2d_physics/layer_4="Background"
 2d_physics/layer_5="WallTiles"
 2d_physics/layer_9="Enemy/Broken"
 

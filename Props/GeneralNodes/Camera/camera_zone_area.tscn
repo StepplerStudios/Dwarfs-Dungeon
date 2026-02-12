@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c78b00ao14uaw"]
+
+[ext_resource type="Script" uid="uid://ds2j4hpjmf2w6" path="res://Props/GeneralNodes/Camera/camera_zone_area.gd" id="1_horlp"]
+
+[node name="CameraZoneArea" type="Area2D" unique_id=765568047]
+collision_layer = 4
+input_pickable = false
+monitorable = false
+script = ExtResource("1_horlp")

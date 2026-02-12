@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bwmhxdr6ixbgp"]
+
+[ext_resource type="Texture2D" uid="uid://cx0ah1tirv32m" path="res://Assets/DD_Sprites/DD_Sprites/Chest.png" id="1_oitvi"]
+
+[node name="Chest" type="CharacterBody2D" unique_id=1473432545]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=983462474]
+scale = Vector2(3, 3)
+texture = ExtResource("1_oitvi")

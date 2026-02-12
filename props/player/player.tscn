@@ -7,7 +7,8 @@
 [ext_resource type="Script" uid="uid://xglqnobgfan7" path="res://Props/player/States/run_state.gd" id="5_c5mag"]
 [ext_resource type="PackedScene" uid="uid://c7fgnv5hxy01r" path="res://Props/Weapon/weapon.tscn" id="6_77agv"]
 [ext_resource type="Script" uid="uid://bewfm38h1yrjv" path="res://Props/Weapon/weapon_rotate.gd" id="6_a53hr"]
-[ext_resource type="Script" uid="uid://4aa3j2jn88vk" path="res://Props/aim_controller.gd" id="9_25rdr"]
+[ext_resource type="Resource" uid="uid://bploa2vx6xnbt" path="res://Props/Weapon/Pick/PickData.tres" id="8_25rdr"]
+[ext_resource type="Script" uid="uid://4aa3j2jn88vk" path="res://Props/GeneralNodes/AimController/aim_controller.gd" id="9_25rdr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y27rj"]
 atlas = ExtResource("2_y27rj")
@@ -592,7 +593,7 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 z_index = 1
 position = Vector2(544, 274)
 scale = Vector2(5, 5)
-collision_mask = 17
+collision_mask = 28
 floor_stop_on_slope = false
 script = ExtResource("1_qrh41")
 
@@ -614,11 +615,6 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/idle/blend_position = Vector2(0, 0)
 parameters/run/blend_position = Vector2(0, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=478833006]
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-
 [node name="StateMachine" type="Node" parent="." unique_id=646274614]
 script = ExtResource("3_qsgml")
 
@@ -637,6 +633,7 @@ weapon = NodePath("Weapon")
 [node name="Weapon" parent="WeaponRotate" unique_id=844050352 instance=ExtResource("6_77agv")]
 light_mask = 0
 z_as_relative = false
+data = ExtResource("8_25rdr")
 
 [node name="AimController" type="Node2D" parent="." unique_id=1218137174 node_paths=PackedStringArray("player")]
 script = ExtResource("9_25rdr")

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c3sieyu00837n"]
+
+[ext_resource type="PackedScene" uid="uid://dkjp1a6uj4de6" path="res://Props/Levels/Level1/room1.tscn" id="1_hsx5d"]
+[ext_resource type="PackedScene" uid="uid://djivosu5fh2xy" path="res://Props/Levels/Level1/room_2.tscn" id="2_lhijn"]
+[ext_resource type="PackedScene" uid="uid://ctaqt2rlrh760" path="res://Props/player/player.tscn" id="3_lhijn"]
+[ext_resource type="PackedScene" uid="uid://df2dpmr1cnrw1" path="res://Props/GeneralNodes/Camera/camera_rooms.tscn" id="4_1jnbt"]
+
+[node name="Level1" type="Node2D" unique_id=147930414]
+
+[node name="player" parent="." unique_id=1895340081 instance=ExtResource("3_lhijn")]
+position = Vector2(580.00006, 612.00006)
+
+[node name="Room1" parent="." unique_id=1857943922 instance=ExtResource("1_hsx5d")]
+
+[node name="Marker2D" parent="Room1/DoorAreaDOWN" parent_id_path=PackedInt32Array(1857943922, 1437658002) index="0" unique_id=1942065034]
+position = Vector2(176, 2336)
+
+[node name="Room2" parent="." unique_id=1029108664 instance=ExtResource("2_lhijn")]
+position = Vector2(8, 2080)
+
+[node name="Marker2D" parent="Room2/DoorAreaUP" parent_id_path=PackedInt32Array(1029108664, 1437658002) index="0" unique_id=1942065034]
+position = Vector2(164, -569)
+
+[node name="CameraRooms" parent="." unique_id=105907204 node_paths=PackedStringArray("player") instance=ExtResource("4_1jnbt")]
+player = NodePath("../player")
+
+[editable path="Room1"]
+[editable path="Room1/DoorAreaDOWN"]
+[editable path="Room2"]
+[editable path="Room2/DoorAreaUP"]
+[editable path="Room2/DoorAreaLEFT"]
