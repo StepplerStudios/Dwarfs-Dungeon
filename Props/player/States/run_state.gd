@@ -1,8 +1,8 @@
 class_name PlayerStateRun extends State
  
 @export var speed: float = 480
-@export var aceleration: float = 1300
-@export var deceleration: float = 1800
+@export var aceleration: float = 10000
+@export var deceleration: float = 10000
 
 @export var idle: PlayerStateIdle
 
@@ -29,7 +29,8 @@ func Process(_delta: float) -> State:
 			 aceleration * _delta)
 	
 	else:
-		player.input_dir = Vector2.ZERO
+		player.velocity = player.velocity.move_toward(
+			Vector2.ZERO, deceleration * _delta)
 
 		return idle
 	

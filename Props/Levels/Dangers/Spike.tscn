@@ -2,7 +2,196 @@
 
 [ext_resource type="Texture2D" uid="uid://ssnsr8eau5gf" path="res://Assets/Test_Sprites/spike_4.png" id="1_2unr3"]
 [ext_resource type="Script" uid="uid://cqyi5gogogwuv" path="res://Props/Levels/Dangers/spike.gd" id="1_fx8yi"]
-[ext_resource type="Script" uid="uid://csss2gsxqqhuo" path="res://Props/GeneralNodes/Hitboxes/hit_box.gd" id="3_dicna"]
+[ext_resource type="Texture2D" uid="uid://irlw15pi6lyn" path="res://Assets/Test_Sprites/spike_0.png" id="2_5mtoi"]
+[ext_resource type="Texture2D" uid="uid://dvn5mfjea2loo" path="res://Assets/Test_Sprites/spike_1.png" id="3_evhww"]
+[ext_resource type="PackedScene" uid="uid://ccrr2o3darww1" path="res://Props/GeneralNodes/Hitboxes/hurt_box.tscn" id="3_fx8yi"]
+[ext_resource type="Texture2D" uid="uid://cxlb8yasu15g8" path="res://Assets/Test_Sprites/spike_2.png" id="4_sqqdt"]
+[ext_resource type="Texture2D" uid="uid://cjsi0oxb73ft1" path="res://Assets/Test_Sprites/spike_3.png" id="5_5tjio"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oa5ew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5mtoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_evhww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sqqdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5tjio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2unr3")
+}],
+"loop": false,
+"name": &"spike",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_0bbh1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"spike"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtBox/CollisionShape2D:debug_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.99387914, 0, 0.23791203, 0.41960785)]
+}
+
+[sub_resource type="Animation" id="Animation_bxwse"]
+resource_name = "spike_off"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"spike"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 3, 2, 1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtBox/CollisionShape2D:debug_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.9973125, 0, 0.15927917, 0.41960785), Color(0.49561024, 0.42877236, 1, 0.41960785)]
+}
+
+[sub_resource type="Animation" id="Animation_g44ab"]
+resource_name = "spike_on"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"spike"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtBox/CollisionShape2D:debug_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4482289, 0.44980592, 1, 0.41960785), Color(0.99697477, 0, 0.16688576, 0.41960785)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ik1c5"]
+_data = {
+&"RESET": SubResource("Animation_0bbh1"),
+&"spike_off": SubResource("Animation_bxwse"),
+&"spike_on": SubResource("Animation_g44ab")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17fl5"]
 size = Vector2(11, 12.5)
@@ -10,16 +199,21 @@ size = Vector2(11, 12.5)
 [node name="Spike" type="Node2D" unique_id=1793502346]
 scale = Vector2(4, 4)
 script = ExtResource("1_fx8yi")
-damage = null
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=253741096]
-texture = ExtResource("1_2unr3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=894827041]
+sprite_frames = SubResource("SpriteFrames_oa5ew")
+animation = &"spike"
+frame = 4
 
-[node name="HitBox" type="Area2D" parent="." unique_id=847371142]
-script = ExtResource("3_dicna")
-metadata/_custom_type_script = "uid://csss2gsxqqhuo"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1663192751]
+libraries/ = SubResource("AnimationLibrary_ik1c5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1244885455]
+[node name="HurtBox" parent="." unique_id=1904035179 instance=ExtResource("3_fx8yi")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1244885455]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_17fl5")
 debug_color = Color(0.99387914, 0, 0.23791203, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=1285759272]

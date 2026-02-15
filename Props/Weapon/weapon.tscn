@@ -70,7 +70,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_6km07"]
 resource_name = "pick_attack"
-length = 0.6
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -86,50 +86,50 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [1.5707963267948966, -0.6981317007977318, 1.5707963267948966, 1.5707963267948966]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.6),
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(20, 0), Vector2(10, 0), Vector2(25, -10), Vector2(25, 0), Vector2(20, 0)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("HurtBox/CollisionShape2D:debug_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6),
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox/CollisionShape2D:debug_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 4.756821, 1),
 "update": 0,
 "values": [Color(0, 0.6, 0.69803923, 0.85490197), Color(1, 0, 0, 0.7176471), Color(0, 0.6, 0.69803923, 0.85490197)]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("HurtBox:monitoring")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6),
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtBox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.5707964, -0.6754424205218054, 2.25322006432468, 1.5707963267948966]
 }
 
 [sub_resource type="Animation" id="Animation_cjy2s"]
@@ -195,7 +195,7 @@ _data = {
 size = Vector2(5, 12)
 
 [node name="Weapon" type="Node2D" unique_id=844050352]
-z_index = 1
+y_sort_enabled = true
 position = Vector2(20, 0)
 rotation = 1.5707964
 scale = Vector2(0.7, 0.7)
@@ -208,7 +208,7 @@ libraries/ = SubResource("AnimationLibrary_cjy2s")
 
 [node name="HurtBox" parent="." unique_id=1904035179 instance=ExtResource("5_icc1a")]
 collision_layer = 2
-monitorable = false
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1851746091]
 position = Vector2(-4.995587e-07, -11.428572)

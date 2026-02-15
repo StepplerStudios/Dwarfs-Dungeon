@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cfi06dd2iadjm"]
+
+[ext_resource type="Script" uid="uid://dhcj8t4c6fvna" path="res://Props/GeneralNodes/ProgressBar/progress_health_bar.gd" id="1_o6lee"]
+[ext_resource type="Texture2D" uid="uid://byqewl7l7hvlg" path="res://Assets/Test_Sprites/health_bar_hud.png" id="2_1jyj3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pqg1i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6lee"]
+bg_color = Color(0.799899, 0, 0.0749323, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jyj3"]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0.16206557, 0.1620656, 0.16206557, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k33hr"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="ProgressHealthBar" type="Control" unique_id=1046314706]
+layout_mode = 3
+anchor_right = 0.29500002
+anchor_bottom = 0.062000003
+offset_left = 100.30501
+offset_right = -274.34497
+offset_bottom = -49.600002
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_o6lee")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1172225112]
+z_index = 1
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 44.845
+theme_override_styles/background = SubResource("StyleBoxEmpty_pqg1i")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o6lee")
+value = 60.0
+show_percentage = false
+
+[node name="DamageBar" type="ProgressBar" parent="HealthBar" unique_id=776438158]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_1jyj3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k33hr")
+value = 80.0
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="HealthBar/DamageBar" unique_id=292705050]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_right = 35.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1jyj3")

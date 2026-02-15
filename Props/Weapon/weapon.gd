@@ -13,6 +13,10 @@ var can_attack: = true
 
 
 func _ready() -> void:
+	if data == null:
+		return
+	
+	hurt_box.damage = data.damage
 	sprite.texture = data.sprite
 	weapon_fx.animation_finished.connect(_end_attack)
 
