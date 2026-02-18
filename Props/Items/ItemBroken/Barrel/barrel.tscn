@@ -5,9 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://bm1qxd5saw8dh" path="res://Props/GeneralNodes/Hitboxes/hit_box.tscn" id="3_ux5om"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s4tg5"]
-radius = 30.364452
+radius = 36.221542
 
 [node name="Barrel" type="Node2D" unique_id=283866115]
+z_index = -1
+y_sort_enabled = true
 script = ExtResource("1_2ii7g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1748764666]
@@ -19,12 +21,13 @@ collision_layer = 256
 collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=493294801]
-position = Vector2(1, -4)
+position = Vector2(1, 4)
 shape = SubResource("CircleShape2D_s4tg5")
+debug_color = Color(0.99607843, 0, 0.21960784, 0.6745098)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=770681027]
 collision_layer = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2087540244]
-position = Vector2(1, -4)
+position = Vector2(1, 4)
 shape = SubResource("CircleShape2D_s4tg5")

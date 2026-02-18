@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://bploa2vx6xnbt"]
 
-[ext_resource type="Script" uid="uid://djqav1iihas7p" path="res://Props/Resourses/Weapons.gd" id="1_5l45o"]
+[ext_resource type="Script" uid="uid://djqav1iihas7p" path="res://Props/Resourses/WeaponData.gd" id="1_5l45o"]
 [ext_resource type="Texture2D" uid="uid://cxboyf0dvco2w" path="res://Assets/DD_Sprites/DD_Sprites/Pickaxe.png" id="2_ufs5e"]
 
 [resource]

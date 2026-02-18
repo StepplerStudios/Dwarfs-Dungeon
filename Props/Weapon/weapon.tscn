@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7fgnv5hxy01r"]
 
-[ext_resource type="Script" uid="uid://3y0co3bf8774" path="res://Props/Weapon/weapon.gd" id="1_5fbeo"]
+[ext_resource type="Script" uid="uid://3y0co3bf8774" path="res://Props/Weapon/Script/weapon.gd" id="1_5fbeo"]
 [ext_resource type="Texture2D" uid="uid://caqyewxn5g7nm" path="res://Assets/Pick_test/pick_test.png" id="3_cjy2s"]
 [ext_resource type="Texture2D" uid="uid://cxboyf0dvco2w" path="res://Assets/DD_Sprites/DD_Sprites/Pickaxe.png" id="3_icc1a"]
 [ext_resource type="PackedScene" uid="uid://ccrr2o3darww1" path="res://Props/GeneralNodes/Hitboxes/hurt_box.tscn" id="5_icc1a"]
