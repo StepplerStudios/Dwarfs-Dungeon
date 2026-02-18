@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://df2dpmr1cnrw1" path="res://Props/GeneralNodes/Camera/room_zone_camera.tscn" id="4_6fgck"]
 [ext_resource type="PackedScene" uid="uid://invk46pjlo5a" path="res://Props/Items/ItemBroken/Barrel/barrel.tscn" id="5_6fgck"]
 [ext_resource type="PackedScene" uid="uid://dkjkbjmg63qdd" path="res://Props/Levels/Background/background.tscn" id="6_iffbl"]
-[ext_resource type="PackedScene" uid="uid://cy67fsb8b7n0u" path="res://Props/Levels/Dangers/Spike.tscn" id="6_p07gb"]
+[ext_resource type="PackedScene" uid="uid://cy67fsb8b7n0u" path="res://Props/Levels/Dangers/Spike/Spike.tscn" id="6_p07gb"]
 [ext_resource type="PackedScene" uid="uid://bwmhxdr6ixbgp" path="res://Props/Items/Decor/Chest.tscn" id="7_271cg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iffbl"]

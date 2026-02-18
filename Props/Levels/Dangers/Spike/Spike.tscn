@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cy67fsb8b7n0u"]
 
 [ext_resource type="Texture2D" uid="uid://ssnsr8eau5gf" path="res://Assets/Test_Sprites/spike_4.png" id="1_2unr3"]
-[ext_resource type="Script" uid="uid://cqyi5gogogwuv" path="res://Props/Levels/Dangers/spike.gd" id="1_fx8yi"]
+[ext_resource type="Script" uid="uid://cqyi5gogogwuv" path="res://Props/Levels/Dangers/Spike/spike.gd" id="1_fx8yi"]
 [ext_resource type="Texture2D" uid="uid://irlw15pi6lyn" path="res://Assets/Test_Sprites/spike_0.png" id="2_5mtoi"]
 [ext_resource type="Texture2D" uid="uid://dvn5mfjea2loo" path="res://Assets/Test_Sprites/spike_1.png" id="3_evhww"]
 [ext_resource type="PackedScene" uid="uid://ccrr2o3darww1" path="res://Props/GeneralNodes/Hitboxes/hurt_box.tscn" id="3_fx8yi"]
